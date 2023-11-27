@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Delete</title>
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1>Book Delete</h1>
+    
+    <form method="post" class="my-4">
+        {% csrf_token %}
+        <div class="alert alert-danger" role="alert">
+            Are you sure you want to delete "{{ object }}" ?
+        </div>
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a class="btn btn-secondary" href="{% url 'book_list' %}">Cancel</a>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-body">
+
+            <h1 class="card-title">Book Details</h1>
+            <h2 class="card-subtitle mb-3 text-muted">Name: {{ object.name }}</h2>
+            <p class="card-text">Pages: {{ object.pages }}</p>
+
+            <!-- Add additional details as needed -->
+
+            <a class="btn btn-primary" href="{% url 'book_list' %}">Back to List</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
